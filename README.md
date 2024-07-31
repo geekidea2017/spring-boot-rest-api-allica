@@ -10,5 +10,7 @@ This Is Home Task from Allica
  **username : sa 
  password : 123
  jdbc url : jdbc:h2:mem:allica**
+ 5. Swagger Ui to access url is : http://localhost:8080/swagger-ui.html
+ 6. Changed SPRING banner to ALLICA BANK Banner while starting Application by Adding banner.txt file
  
  
