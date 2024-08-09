@@ -5,6 +5,7 @@ import com.hometask.allica.service.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,9 +32,9 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/customer")
-	public List<Customer> getAllCustomer(){
-		logger.info("Get All Customer ");
-	 	return customerService.getAllCustomer();
+	public Page<Customer> getAllCustomer(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "2") int size){
+		logger.info("Get All Customer in pagination");
+	 	return customerService.getAllCustomer(page,size);
 	}
 
 }

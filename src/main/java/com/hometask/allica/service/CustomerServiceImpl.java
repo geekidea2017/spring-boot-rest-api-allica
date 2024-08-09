@@ -6,6 +6,8 @@ import com.hometask.allica.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -35,10 +37,9 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public List<Customer> getAllCustomer() {
-		logger.info("get All customer");
+	public Page<Customer> getAllCustomer(int page, int size) {
+		logger.info("get All customer for page {} and size {}", page,size);
 		List<Customer> customers = new ArrayList<Customer>();
-		customerRepository.findAll().forEach(customer -> customers.add(customer));
-		return customers;
+		return customerRepository.findAll(PageRequest.of(page,size));
 	}
 }

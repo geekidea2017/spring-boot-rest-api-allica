@@ -29,7 +29,7 @@ public class CustomerControllerrTest {
     }
     @Test
     public void shouldRespondeAllCustomer() throws Exception {
-        mockMvc.perform(get("/customer"))
+        mockMvc.perform(get("/customer?page=0&size=3"))
                 .andExpect(status().is2xxSuccessful());
     }
 }
