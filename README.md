@@ -1,4 +1,4 @@
-This Is Home Task from Allica 
+`This Is Home Task from Allica :`
 
 1. Create Spring boot application from spring initialization.io **https://start.spring.io/**
 2. Added dependencies **spring-boot-starter-data-jpa,spring-boot-starter-web,h2database,spring-boot-starter-test**
@@ -12,5 +12,11 @@ This Is Home Task from Allica
  jdbc url : jdbc:h2:mem:allica**
  5. Swagger Ui to access url is : http://localhost:8080/swagger-ui.html
  6. Changed SPRING banner to ALLICA BANK Banner while starting Application by Adding banner.txt file
+ 
+ 
+ **`Docker:`**
+ 1. to build a docker image : docker build -t spring-boot-rest-api-allica .
+ 2. to run the application in Docker : docker run -p 8080:8080 spring-boot-rest-api-allica
+ 
  
  
